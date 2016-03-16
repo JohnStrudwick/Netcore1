@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Test Page";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+
+
+@using (Html.BeginForm("action", "Home", FormMethod.Post, new { id = "search" }))
+{
+<p>
+    <fieldset>
+        
+
+        Serial number <input  name="num" />
+        <input id="search" type="submit" value="Search" />
+    </fieldset>
+</p>
+}  
+@using (Html.BeginForm("actionAll", "Home", FormMethod.Post, new { id = "searchAll" }))
+{
+<p>
+    <input id="searchAll" type="submit" value="SearchAll" />
+</p>
+}  
